@@ -1,0 +1,49 @@
+#include <stdio.h>
+float s, r, t, VolumeKubus, VolumeSilinder, LuasLingkaran;
+int Menu;
+char back;
+main () {
+do {
+printf("                   Program Penghitung Volume dan Luas Bangun Ruang\n");
+printf("                 ===================================================");
+printf("\n\n                          Nama  : Ari Eko Prio Utomo\n                          NIM   : 314 3111 006\n                          Prodi : Manajemen Informatika (A)");
+printf("\n\n\n==================================================");
+printf("\n\n1. Menghitung Volume kubus.");
+printf("\n2. Menghitung Luas Lingkaran.");
+printf("\n3. Menghitung Volume silinder.");
+printf("\n\n==================================================");
+printf("\n\nMasukkan pilihan yang anda inginkan : "); scanf("%d", &Menu);
+switch (Menu)
+{
+case 1 :
+{
+printf("Masukkan panjang sisi kubus (cm) = "); scanf("%f", &s);
+VolumeKubus = pow(s,3);
+printf("Hasil dari Volume kubus dengan sisi %4.2f = %4.2f cm3", s, VolumeKubus);
+break;
+}
+case 2 :
+{
+printf("Masukkan nilai untuk jari-jari (r) lingkaran (cm)= "); scanf("%f", &r);
+LuasLingkaran = 3.14*pow(r,2);
+printf("Hasil dari Luas lingkaran dengan jari-jari (r) lingkaran %4.2f = %4.2f cm2", r, LuasLingkaran);
+break;
+}
+case 3 :
+{
+printf("Masukkan nilai untuk jari-jari (r) lingkaran (cm)= "); scanf("%f", &r);
+printf("Masukkan nilai untuk tinggi (t) silinder (cm)= " ); scanf("%f", &t);
+VolumeSilinder = 3.14*pow(r,2)*t;
+printf("Hasil dari Volume Silinder dengan jari-jari (r) lingkaran %4.2f dan tinggi (t) silinder %4.2f = %4.2f cm3", r, t, VolumeSilinder);
+break;
+}
+default :
+{
+printf("Perintah yang anda masukkan salah ! ");
+printf("\nTry Again :)");
+break;
+}
+}
+printf("\n\nIngin Kembali ke Menu? (Y/T) : "); scanf("%s", &back);
+} while(back!='t');
+}
